@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  r_min: 1
+  l_min: 1
+  g_min: 1
+  s_min: 1
+  phrase: MyText
+  comment: MyText
+
+two:
+  user_id: 1
+  r_min: 1
+  l_min: 1
+  g_min: 1
+  s_min: 1
+  phrase: MyText
+  comment: MyText

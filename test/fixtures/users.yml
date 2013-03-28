@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  provider: MyString
+  uid: MyString
+  name: MyString
+  email: MyString
+  total_r_min: 1
+  total_l_min: 1
+  total_g_min: 1
+  total_s_min: 1
+
+two:
+  provider: MyString
+  uid: MyString
+  name: MyString
+  email: MyString
+  total_r_min: 1
+  total_l_min: 1
+  total_g_min: 1
+  total_s_min: 1

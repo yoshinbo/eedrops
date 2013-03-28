@@ -1,0 +1,35 @@
+<h1>Listing logs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>R min</th>
+    <th>L min</th>
+    <th>G min</th>
+    <th>S min</th>
+    <th>Phrase</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @logs.each do |log| %>
+  <tr>
+    <td><%= log.user_id %></td>
+    <td><%= log.r_min %></td>
+    <td><%= log.l_min %></td>
+    <td><%= log.g_min %></td>
+    <td><%= log.s_min %></td>
+    <td><%= log.phrase %></td>
+    <td><%= log.comment %></td>
+    <td><%= link_to 'Show', log %></td>
+    <td><%= link_to 'Edit', edit_log_path(log) %></td>
+    <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Log', new_log_path %>

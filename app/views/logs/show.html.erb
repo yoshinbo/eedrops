@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @log.user_id %>
+</p>
+
+<p>
+  <b>R min:</b>
+  <%= @log.r_min %>
+</p>
+
+<p>
+  <b>L min:</b>
+  <%= @log.l_min %>
+</p>
+
+<p>
+  <b>G min:</b>
+  <%= @log.g_min %>
+</p>
+
+<p>
+  <b>S min:</b>
+  <%= @log.s_min %>
+</p>
+
+<p>
+  <b>Phrase:</b>
+  <%= @log.phrase %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @log.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_log_path(@log) %> |
+<%= link_to 'Back', logs_path %>
