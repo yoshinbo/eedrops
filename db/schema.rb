@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130228000056) do
+ActiveRecord::Schema.define(:version => 20130408230402) do
 
   create_table "logs", :force => true do |t|
     t.integer  "user_id"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(:version => 20130228000056) do
     t.text     "comment"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "toeic_logs", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "r_score"
+    t.integer  "l_score"
+    t.integer  "total_score"
+    t.datetime "exam_date"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "users", :force => true do |t|

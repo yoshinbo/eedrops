@@ -1,0 +1,31 @@
+<h1>Listing toeic_logs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>R score</th>
+    <th>L score</th>
+    <th>Total score</th>
+    <th>Exam date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @toeic_logs.each do |toeic_log| %>
+  <tr>
+    <td><%= toeic_log.user_id %></td>
+    <td><%= toeic_log.r_score %></td>
+    <td><%= toeic_log.l_score %></td>
+    <td><%= toeic_log.total_score %></td>
+    <td><%= toeic_log.exam_date %></td>
+    <td><%= link_to 'Show', toeic_log %></td>
+    <td><%= link_to 'Edit', edit_toeic_log_path(toeic_log) %></td>
+    <td><%= link_to 'Destroy', toeic_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Toeic log', new_toeic_log_path %>

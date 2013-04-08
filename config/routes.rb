@@ -1,4 +1,6 @@
 Eedrops::Application.routes.draw do
+  resources :toeic_logs
+
   root :to => 'logs#index'
 
   resources :logs

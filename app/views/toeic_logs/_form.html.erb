@@ -1,0 +1,34 @@
+<%= form_for(@toeic_log) do |f| %>
+  <% if @toeic_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@toeic_log.errors.count, "error") %> prohibited this toeic_log from being saved:</h2>
+
+      <ul>
+      <% @toeic_log.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.number_field :user_id, :type => 'hidden', :value => @user.id %>
+  <div class="field">
+    <%= f.label :r_score %><br />
+    <%= f.number_field :r_score %>
+  </div>
+  <div class="field">
+    <%= f.label :l_score %><br />
+    <%= f.number_field :l_score %>
+  </div>
+  <div class="field">
+    <%= f.label :total_score %><br />
+    <%= f.number_field :total_score %>
+  </div>
+  <div class="field">
+    <%= f.label :exam_date %><br />
+    <%= f.date_select :exam_date, :use_month_numbers => true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

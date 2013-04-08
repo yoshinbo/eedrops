@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @toeic_log.user_id %>
+</p>
+
+<p>
+  <b>R score:</b>
+  <%= @toeic_log.r_score %>
+</p>
+
+<p>
+  <b>L score:</b>
+  <%= @toeic_log.l_score %>
+</p>
+
+<p>
+  <b>Total score:</b>
+  <%= @toeic_log.total_score %>
+</p>
+
+<p>
+  <b>Exam date:</b>
+  <%= @toeic_log.exam_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_toeic_log_path(@toeic_log) %> |
+<%= link_to 'Back', toeic_logs_path %>
