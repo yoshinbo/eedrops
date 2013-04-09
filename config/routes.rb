@@ -1,7 +1,9 @@
 Eedrops::Application.routes.draw do
+  get "common/top"
+
   resources :toeic_logs
 
-  root :to => 'logs#index'
+  root :to => 'common#top'
 
   resources :logs
 

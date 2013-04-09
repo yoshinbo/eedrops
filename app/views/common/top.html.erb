@@ -1,0 +1,5 @@
+<h1>Common#top</h1>
+<% if @user %>
+<p><%= link_to 'Logs', {:controller => 'logs', :action => 'index', :anchor => 'top'} %></p>
+<p><%= link_to 'TOEIC Logs', {:controller => 'toeic_logs', :action => 'index', :anchor => 'top'} %></p>
+<% end %>

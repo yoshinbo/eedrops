@@ -1,7 +1,7 @@
 # encoding: utf-8
 class LogsController < ApplicationController
   # 循環しないようにログインフィルタをスキップする
-  before_filter :has_logined, :except => [ :index ]
+  before_filter :has_logined
   #before_filter :has_logined
   #skip_before_filter :has_logined
 

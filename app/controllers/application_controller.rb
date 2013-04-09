@@ -14,15 +14,16 @@ private
       begin
         @user = User.find_all_by_id(session[:user_id])
         rescue ActiveRecord::RecordNotFound
-          #logger.error "セッションの情報(" + session[:user_id] + ")は user には存在しません。"
+          logger.error session[:user_id] + " doesn't exist in user data."
           reset_session
         end
       end
 
       unless @user
-        #flash[:referer] = request.fullpath
+        # セッションに今いたページを記録しておく
+        flash[:referer] = request.fullpath
         #redirect_to :controller => 'login', :action => 'index'
-        redirect_to :controller => 'logs', :action => 'index'
+        redirect_to :controller => 'common', :action => 'top'
       end
     end
-end
+  end

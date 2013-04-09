@@ -17,6 +17,13 @@
     <% end %>
   </div>
 
+  <nav class="global_nav">
+    <ul>
+      <li><%= link_to 'Logs', {:controller => 'logs', :action => 'index', :anchor => 'top'} %></li>
+      <li><%= link_to 'TOEIC Logs', {:controller => 'toeic_logs', :action => 'index', :anchor => 'top'} %></li>
+    </ul>
+  </nav>
+
   <%= yield %>
 
 </body>
