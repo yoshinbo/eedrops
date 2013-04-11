@@ -49,6 +49,7 @@ class LogsController < ApplicationController
   # POST /logs.json
   def create
     @log = Log.new(params[:log])
+    @user = current_user;
 
     respond_to do |format|
       if @log.save
@@ -65,6 +66,7 @@ class LogsController < ApplicationController
   # PUT /logs/1.json
   def update
     @log = Log.find(params[:id])
+    @user = current_user;
 
     respond_to do |format|
       if @log.update_attributes(params[:log])

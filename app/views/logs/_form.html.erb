@@ -14,19 +14,19 @@
   <%= f.number_field :user_id, :type => 'hidden', :value => @user.id %>
   <div class="field">
     <%= f.label :r_min %><br />
-    <%= f.number_field :r_min %>
+    <%= f.select :r_min, (0...51).to_a.map{|t| t*10} %> min
   </div>
   <div class="field">
     <%= f.label :l_min %><br />
-    <%= f.number_field :l_min %>
+    <%= f.select :l_min, (0...51).to_a.map{|t| t*10} %> min
   </div>
   <div class="field">
     <%= f.label :g_min %><br />
-    <%= f.number_field :g_min %>
+    <%= f.select :g_min, (0...51).to_a.map{|t| t*10} %> min
   </div>
   <div class="field">
     <%= f.label :s_min %><br />
-    <%= f.number_field :s_min %>
+    <%= f.select :s_min, (0...51).to_a.map{|t| t*10} %> min
   </div>
   <div class="field">
     <%= f.label :phrase %><br />

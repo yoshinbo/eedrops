@@ -3,6 +3,7 @@ class ToeicLogsController < ApplicationController
   # GET /toeic_logs
   # GET /toeic_logs.json
   def index
+    @user = current_user;
     @toeic_logs = ToeicLog.all
 
     respond_to do |format|
@@ -14,6 +15,7 @@ class ToeicLogsController < ApplicationController
   # GET /toeic_logs/1
   # GET /toeic_logs/1.json
   def show
+    @user = current_user;
     @toeic_log = ToeicLog.find(params[:id])
 
     respond_to do |format|
@@ -25,8 +27,8 @@ class ToeicLogsController < ApplicationController
   # GET /toeic_logs/new
   # GET /toeic_logs/new.json
   def new
-    @toeic_log = ToeicLog.new
     @user = current_user;
+    @toeic_log = ToeicLog.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,13 +38,14 @@ class ToeicLogsController < ApplicationController
 
   # GET /toeic_logs/1/edit
   def edit
-    @toeic_log = ToeicLog.find(params[:id])
     @user = current_user;
+    @toeic_log = ToeicLog.find(params[:id])
   end
 
   # POST /toeic_logs
   # POST /toeic_logs.json
   def create
+    @user = current_user;
     @toeic_log = ToeicLog.new(params[:toeic_log])
 
     respond_to do |format|
@@ -59,6 +62,7 @@ class ToeicLogsController < ApplicationController
   # PUT /toeic_logs/1
   # PUT /toeic_logs/1.json
   def update
+    @user = current_user;
     @toeic_log = ToeicLog.find(params[:id])
 
     respond_to do |format|
@@ -75,6 +79,7 @@ class ToeicLogsController < ApplicationController
   # DELETE /toeic_logs/1
   # DELETE /toeic_logs/1.json
   def destroy
+    @user = current_user;
     @toeic_log = ToeicLog.find(params[:id])
     @toeic_log.destroy
 
